@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: dowdiness/gatsby-bootcamp
+  branch: master
 
 media_folder: static/assets
 public_folder: assets
