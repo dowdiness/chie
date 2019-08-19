@@ -5,5 +5,14 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  plugins: [
+    'gatsby-plugin-postcss', 
+    'gatsby-plugin-emotion',
+    {
+      resolve: 'gatsby-plugin-purgecss',
+      options: {
+        tailwind: true,
+      }
+    }
+  ]
 }
