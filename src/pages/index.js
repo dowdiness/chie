@@ -1,7 +1,8 @@
 import React from "react"
 import styled from '@emotion/styled'
 //import Header from '../components/header'
-import { graphql } from 'gatsby';
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const Text = styled.p`
   color: blue;
@@ -14,9 +15,7 @@ export default (props) => {
   <div className="container mx-auto w-screen h-screen flex items-center justify-center flex-col">
     <h1 className="font-bold text-xl">{data.title}</h1>
     <Text>{data.intro}</Text>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <img src={data.image} alt='home' />
-    </div>
+    <Img className="w-full" fluid={data.image.childImageSharp.fluid} />
   </div>
 )}
 
@@ -29,7 +28,13 @@ export const query = graphql`
             frontmatter {
               title
               intro
-              image
+              image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
           }
         }
       }
