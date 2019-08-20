@@ -42,7 +42,8 @@ module.exports = {
         // should be an object or a function that is executed in the browser
         // Defaults to null
         defaultDataLayer: { platform: "gatsby" },
-        },  
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
