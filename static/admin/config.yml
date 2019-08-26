@@ -5,8 +5,6 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
-publish_mode: editorial_workflow
-
 collections:
   - label: "Pages"
     name: "pages"
@@ -24,7 +22,7 @@ collections:
     folder: "content/works"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "work-post"}
       - {label: "タイトル", name: "title", widget: "string"}
       - {label: "説明", name: "description", widget: "text"}
       - {label: "Featured Work", name: "featuredpost", widget: "boolean"}
