@@ -16,6 +16,20 @@ collections:
           - {label: "タイトル", name: "title", widget: "string"}
           - {label: "紹介", name: "intro", widget: "text"}
           - {label: "写真", name: "image", widget: "image"}
+      - label: "Profile Page"
+        name: "profile"
+        file: "content/profile.md"
+        fields:
+          - {label: "タイトル", name: "title", widget: "string"}
+          - {label: "紹介", name: "intro", widget: "text"}
+          - {label: "写真", name: "image", widget: "image"}
+      - label: "Contact Page"
+        name: "contact"
+        file: "content/contact.md"
+        fields:
+          - {label: "タイトル", name: "title", widget: "string"}
+          - {label: "文章", name: "intro", widget: "text"}
+          - {label: "お問い合わせ内容例文", name: "example", widget: "text"}
 
   - label: "Works"
     name: "works"
@@ -24,8 +38,9 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "work-post"}
       - {label: "タイトル", name: "title", widget: "string"}
+      - {label: "url", name: "path", widget: "string"}
       - {label: "説明", name: "description", widget: "text"}
-      - {label: "Featured Work", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "優先記事", name: "featuredwork", widget: "boolean"}
+      - {label: "見出し写真", name: "featuredimage", widget: image}
+      - {label: "ギャラリー", name: "images", widget: image, allow_multiple: "true"}
       - {label: "本文", name: "body", widget: "markdown"}
-      - {label: "タグ", name: "tags", widget: "list"}
