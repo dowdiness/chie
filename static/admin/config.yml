@@ -42,5 +42,8 @@ collections:
       - {label: "説明", name: "description", widget: "text"}
       - {label: "優先記事", name: "featuredwork", widget: "boolean"}
       - {label: "見出し写真", name: "featuredimage", widget: image}
-      - {label: "ギャラリー", name: "images", widget: image, allow_multiple: "true"}
+      - label: "ギャラリー"
+        name: "galleryImages"
+        widget: "list"
+        field: {label: Image, name: image, widget: image}
       - {label: "本文", name: "body", widget: "markdown"}
