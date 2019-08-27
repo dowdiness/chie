@@ -1,6 +1,8 @@
 import React from 'react'
 import Headroom from 'react-headroom'
-import Scroll from 'react-scroll-to-element'
+import loadable from '@loadable/component'
+
+const Scroll = loadable(() => import('react-scroll-to-element'))
 
 export default () => (
   <Headroom>
