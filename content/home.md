@@ -1,6 +1,6 @@
 ---
-title: ちえさんのサイト
-intro: ライオンの写真↓
-image: /assets/p_20190513_160656_p.jpg
+title: 'Ono Chie '
+intro: Onochule is one of the best fashion brand in the world.
+image: /assets/日本語対応-6.jpg
 ---
 
