@@ -13,10 +13,10 @@ const Text = styled.p`
 export default (props) => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   return (
-    <div className="container mx-auto py-8 w-10/12 h-screen flex items-center justify-center flex-col">
+    <div className="container mx-auto py-8 w-10/12 h-full flex items-center justify-center flex-col">
       <h1 className="font-bold text-xl">{data.title}</h1>
       <Text>{data.intro}</Text>
-      <Img className="w-full" fluid={data.image.childImageSharp.fluid} />
+      <Img className="w-full mb-8" fluid={data.image.childImageSharp.fluid} />
       <WorkRoll></WorkRoll>
     </div>
 )}

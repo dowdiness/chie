@@ -71,7 +71,6 @@ export default () => (
               html
               frontmatter {
                 title
-                tags
                 description
                 featuredimage {
                   childImageSharp {

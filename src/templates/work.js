@@ -20,7 +20,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        tags
         description
         featuredimage {
           childImageSharp {
