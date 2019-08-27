@@ -16,6 +16,7 @@ module.exports = {
     'gatsby-plugin-emotion',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-layout`,
     {
       resolve: 'gatsby-plugin-purgecss',
       options: {
@@ -30,18 +31,9 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-google-tagmanager",
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        id: "GTM-K2R2CL7",
-  
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
-  
-        // datalayer to be set before GTM is loaded
-        // should be an object or a function that is executed in the browser
-        // Defaults to null
-        defaultDataLayer: { platform: "gatsby" },
+        id: "UA-146082552-1",
       },
     },
     {
