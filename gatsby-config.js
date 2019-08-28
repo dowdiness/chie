@@ -3,6 +3,9 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+require("dotenv").config({
+  path: `.env`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -36,7 +39,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        id: "UA-146082552-1",
+        id: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
     {
@@ -63,6 +66,7 @@ module.exports = {
               resolve: `gatsby-remark-images`,
               options: {
                   maxWidth: 590,
+                  withWebp: true
               },
           },
         ],

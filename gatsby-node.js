@@ -16,7 +16,7 @@ exports.createPages = async ({ actions, graphql }) => {
         node {
           id
           frontmatter {
-            title
+            path
           }
         }
       }
@@ -31,7 +31,7 @@ exports.createPages = async ({ actions, graphql }) => {
   works.forEach(({ node }) => {
     const id = node.id
     createPage({
-      path: `/works/${node.frontmatter.title}`,
+      path: `/works/${node.frontmatter.path}`,
       component: path.resolve(`src/templates/work.js`),
       context: {
         id,

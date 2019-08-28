@@ -47,7 +47,7 @@ class WorkRoll extends React.Component {
                   {work.excerpt}
                   <br />
                   <br />
-                  <Link className="button" to={`/works/${work.frontmatter.title}`}>
+                  <Link className="button" to={`/works/${work.frontmatter.path}`}>
                     Keep Reading →
                   </Link>
                 </p>
@@ -71,11 +71,12 @@ export default () => (
               html
               frontmatter {
                 title
+                path
                 description
                 featuredimage {
                   childImageSharp {
                     fluid {
-                      ...GatsbyImageSharpFluid
+                      ...GatsbyImageSharpFluid_withWebp
                     }
                   }
                 }
