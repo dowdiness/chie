@@ -6,7 +6,10 @@
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://quirky-kepler-11b926.netlify.com`,
+    title: `Ono chie`,
+    description: `Ono chie's port folio site.`,
+    author: `koji ishimoto`,
+    siteUrl: `https://chie.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-sitemap`,
@@ -26,7 +29,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://quirky-kepler-11b926.netlify.com`,
+        siteUrl: `https://chie.netlify.com`,
         stripQueryString: true,
       },
     },

@@ -2,6 +2,11 @@ module.exports = {
   theme: {
     extend: {}
   },
-  variants: {},
-  plugins: []
+  variants: {
+    fontSize: ['responsive', 'hover'],
+  },
+  plugins: [
+    require('tailwindcss-transitions')(),
+    require('@tailwindcss/custom-forms'),
+  ]
 }

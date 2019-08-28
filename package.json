@@ -46,8 +46,10 @@
     "react-scroll-to-element": "^0.2.0"
   },
   "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.0",
     "prettier": "^1.18.2",
-    "tailwindcss": "^1.1.2"
+    "tailwindcss": "^1.1.2",
+    "tailwindcss-transitions": "^2.0.1"
   },
   "repository": {
     "type": "git",
