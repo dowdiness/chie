@@ -1,7 +1,9 @@
 import React from "react"
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
+
 import Img from 'gatsby-image'
+import BackgroundImage from 'gatsby-background-image'
 
 import WorkRoll from '../components/WorkRoll'
 import Seo from "../components/Seo"
@@ -19,7 +21,14 @@ export default (props) => {
   return (
     <div className="flex items-center justify-center flex-col">
       <Seo title="Home" />
-      <h1 className="font-bold text-3xl">{data.title}</h1>
+      <BackgroundImage
+        Tag="section"
+        className="w-screen h-screen"
+        fluid={data.image.childImageSharp.fluid}
+        backgroundColor={`#040e18`}
+      >
+        <h1 className="font-bold text-3xl">{data.title}</h1>
+      </BackgroundImage>
       <Text>{data.intro}</Text>
       <Img className="w-full mb-8" fluid={data.image.childImageSharp.fluid} />
       <h2 id="works">Works</h2>

@@ -33,7 +33,7 @@ class WorkRoll extends React.Component {
                   <p className="work-meta">
                     <Link
                       className="title has-text-primary is-size-4"
-                      to={`/works/${work.frontmatter.title}`}
+                      to={`/works/${work.frontmatter.path}`}
                     >
                       {work.frontmatter.title}
                     </Link>

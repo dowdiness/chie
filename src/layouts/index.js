@@ -1,9 +1,8 @@
 import React from "react"
-import Header from '../components/header'
+//import Header from '../components/header'
 
 const Layout = ({ children }) => (
   <>
-    <Header />
     <div className="container mx-auto w-10/12">
       <main>{children}</main>
       <footer className="mt-8 mb-4">
