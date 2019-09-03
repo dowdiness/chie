@@ -23,6 +23,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-layout`,
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: 'gatsby-plugin-purgecss',
       options: {
@@ -56,7 +57,14 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: true,
+        stripMetadata: true,
+        defaultQuality: 80,
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',

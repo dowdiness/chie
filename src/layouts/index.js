@@ -3,12 +3,12 @@ import React from "react"
 
 const Layout = ({ children }) => (
   <>
-    <div className="container mx-auto w-10/12">
+    <div>
       <main>{children}</main>
-      <footer className="mt-8 mb-4">
+      <footer className="font-sans mt-8 mb-4">
         © {new Date().getFullYear()}, Built with
         {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <a className="hover:text-gray-600 transition-color transition-300" href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
     </div>
   </>
