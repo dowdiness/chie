@@ -90,14 +90,14 @@ export const query = graphql`
         }
       }
     }
-    allImageSharp(filter: {id: {eq: "f569c202-79b6-5ac1-85b5-1ace74bf6c3b"}}) {
-      edges {
-        node {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+    allImageSharp(filter: {fluid: {originalName: {eq: "IMG_9998.JPG"}}}) {
+    edges {
+      node {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
   }
+}
 `
