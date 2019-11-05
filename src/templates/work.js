@@ -7,13 +7,10 @@ export default function Template({ data }) {
   const { frontmatter, html } = data.markdownRemark
   return (
     <div className="blog-post mt-4">
-      <Seo title={frontmatter.title}/>
+      <Seo title={frontmatter.title} />
       <h1 className="font-sans my-4 font-bold text-2xl text-gray-900">{frontmatter.title}</h1>
       <h2 className="font-san smy-4 text-md text-gray-700">{frontmatter.description}</h2>
-      <div
-        className="font-serif blog-post-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <div className="font-serif blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   )
 }

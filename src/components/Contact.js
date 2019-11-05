@@ -1,8 +1,11 @@
-import React from 'react'
+import React from "react"
 
 const Contact = () => {
-  return(
-    <form className="w-full" action="https://docs.google.com/forms/d/e/1FAIpQLSf59qqalA9EcMf0VukXyDaAfjNiGfpanlU3fjbXVSPDth23bA/formResponse">
+  return (
+    <form
+      className="w-full"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSf59qqalA9EcMf0VukXyDaAfjNiGfpanlU3fjbXVSPDth23bA/formResponse"
+    >
       <label className="block">
         <span className="text-gray-700">お名前</span>
         <input
@@ -38,8 +41,9 @@ const Contact = () => {
           type="submit"
           name="button"
           className="mt-4 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-          value="送信">
-            送信
+          value="送信"
+        >
+          送信
         </button>
       </div>
     </form>
