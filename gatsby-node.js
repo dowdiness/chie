@@ -1,6 +1,6 @@
 // In your gatsby-node.js file
 
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const { fmImagesToRelative } = require(`gatsby-remark-relative-images`)
 const path = require(`path`)
 
 exports.onCreateNode = ({ node }) => {
@@ -10,18 +10,18 @@ exports.onCreateNode = ({ node }) => {
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const result = await graphql(`
-  query WorkQuery {
-    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "work-post"}}}) {
-      edges {
-        node {
-          id
-          frontmatter {
-            path
+    query WorkQuery {
+      allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "work-post" } } }) {
+        edges {
+          node {
+            id
+            frontmatter {
+              path
+            }
           }
         }
       }
     }
-  }
   `)
   if (result.errors) {
     console.error(result.errors)

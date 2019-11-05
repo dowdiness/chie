@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-require("dotenv").config({
+require(`dotenv`).config({
   path: `.env`,
 })
 
@@ -18,17 +18,17 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-netlify-cms`,
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-emotion',
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-layout`,
     `gatsby-plugin-preload-fonts`,
     {
-      resolve: 'gatsby-plugin-purgecss',
+      resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-canonical-urls`,
@@ -38,7 +38,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
         id: process.env.GOOGLE_ANALYTICS_ID,
       },
@@ -46,7 +46,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'images',
+        name: `images`,
         path: `${__dirname}/static/assets`,
       },
     },
@@ -65,20 +65,20 @@ module.exports = {
         defaultQuality: 80,
       },
     },
-    'gatsby-transformer-sharp',
+    `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-              resolve: `gatsby-remark-images`,
-              options: {
-                  maxWidth: 1024,
-                  withWebp: true
-              },
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1024,
+              withWebp: true,
+            },
           },
         ],
-      }
-    }
-  ]
+      },
+    },
+  ],
 }
