@@ -16,7 +16,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "@emotion/core": "^10.0.16",
+    "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.15",
     "@loadable/component": "^5.10.3",
     "emotion-server": "^10.0.14",
