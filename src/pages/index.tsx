@@ -75,7 +75,7 @@ const IndexPage = props => {
 }
 
 export const query = graphql`
-  query {
+  query IndexQuery {
     allFile(filter: { sourceInstanceName: { eq: "content" }, name: { eq: "home" } }) {
       edges {
         node {

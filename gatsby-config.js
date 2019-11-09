@@ -15,6 +15,14 @@ module.exports = {
     siteUrl: `https://chie.netlify.com`,
   },
   plugins: [
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        fileName: `types/graphql-types.d.ts`,
+        codegen: true,
+      },
+    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-netlify-cms`,

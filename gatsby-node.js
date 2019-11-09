@@ -1,4 +1,11 @@
-// In your gatsby-node.js file
+"use strict"
+
+require(`ts-node`).register({
+  compilerOptions: {
+    module: `commonjs`,
+    target: `esnext`,
+  },
+})
 
 const { fmImagesToRelative } = require(`gatsby-remark-relative-images`)
 const path = require(`path`)
@@ -6,6 +13,8 @@ const path = require(`path`)
 exports.onCreateNode = ({ node }) => {
   fmImagesToRelative(node)
 }
+
+// exports.createPages = require(`./gatsby-node/index`).createPages
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
@@ -23,16 +32,13 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `)
-  if (result.errors) {
-    console.error(result.errors)
-  }
 
   const works = result.data.allMarkdownRemark.edges
   works.forEach(({ node }) => {
     const id = node.id
     createPage({
       path: `/works/${node.frontmatter.path}`,
-      component: path.resolve(`src/templates/work.js`),
+      component: path.resolve(`src/templates/work.tsx`),
       context: {
         id,
       },
