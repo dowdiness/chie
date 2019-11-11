@@ -50,7 +50,7 @@
     "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.1",
     "react-scroll-to-element": "^0.2.0",
-    "ts-node": "^8.4.1",
+    "ts-node": "^8.5.0",
     "typescript": "^3.7.2"
   },
   "devDependencies": {
