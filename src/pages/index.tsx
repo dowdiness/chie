@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { graphql } from "gatsby"
+import { IndexQuery } from "../../types/graphql-types"
 
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
@@ -8,6 +9,10 @@ import BackgroundImage from "gatsby-background-image"
 import WorkRoll from "../components/WorkRoll"
 import Seo from "../components/Seo"
 import Contact from "../components/Contact"
+
+type Props = {
+  data: IndexQuery
+}
 
 const Text = styled.p`
   color: white;
@@ -36,19 +41,19 @@ const BrownImg = styled(Img)`
   bottom: 10%;
 `
 
-const IndexPage = props => {
-  const fluid = props.data.allImageSharp.edges[0].node.fluid
-  const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+const IndexPage: React.FC<Props> = ({ data }) => {
+  const fluid = data.allImageSharp.edges[0].node.fluid
+  const markdown = data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   return (
     <div className="flex items-center justify-center flex-col">
       <Seo title="Home" />
       <BackgroundImage
         Tag="section"
         className="w-screen h-screen"
-        fluid={data.image.childImageSharp.fluid}
+        fluid={markdown.image.childImageSharp.fluid}
         backgroundColor={`#b39b87`}
       >
-        <MainText className="font-sans font-bold text-4xl text-white">{data.title}</MainText>
+        <MainText className="font-sans font-bold text-4xl text-white">{markdown.title}</MainText>
       </BackgroundImage>
       <div className="w-screen h-screen relative">
         <Pretapor className="bg-white absolute top-0"></Pretapor>
@@ -75,7 +80,7 @@ const IndexPage = props => {
 }
 
 export const query = graphql`
-  query IndexQuery {
+  query Index {
     allFile(filter: { sourceInstanceName: { eq: "content" }, name: { eq: "home" } }) {
       edges {
         node {

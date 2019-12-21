@@ -5,7 +5,7 @@ import loadable from "@loadable/component"
 
 const Scroll = loadable(() => import(`react-scroll-to-element`))
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <Headroom>
       <nav className="w-screen h-16 bg-white flex justify-between items-center shadow-md">

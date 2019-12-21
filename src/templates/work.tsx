@@ -1,9 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { WorkPostByIdQuery } from "../../types/graphql-types"
 
 import Seo from "../components/Seo"
 
-export default function Template({ data }) {
+type Props = {
+  data: WorkPostByIdQuery
+}
+
+export const WorkTemplate: React.FC<Props> = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
   return (
     <div className="blog-post mt-4">

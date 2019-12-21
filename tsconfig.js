@@ -7,7 +7,7 @@ module.exports = {
     removeComments: true,
     preserveConstEnums: true,
     sourceMap: true,
-    esModuleInterop: true,
+    allowSyntheticDefaultImports: true,
     jsx: `react`,
     lib: [`dom`, `esnext`],
   },

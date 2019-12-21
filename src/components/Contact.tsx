@@ -1,6 +1,6 @@
 import React from "react"
 
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <form
       className="w-full"
@@ -31,7 +31,7 @@ const Contact = () => {
         <textarea
           name="entry.907539306"
           className="form-textarea mt-1 block w-full"
-          rows="3"
+          rows={3}
           placeholder="１億出して全部買いたい"
           required
         />
