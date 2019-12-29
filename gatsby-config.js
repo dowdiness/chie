@@ -26,6 +26,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-chakra-ui`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
